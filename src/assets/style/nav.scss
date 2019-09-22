@@ -1,0 +1,33 @@
+@import "common";
+.nav {
+  height: 50px;
+  line-height: 50px;
+  background-color:$themeColor;
+  @include font(16px, $write, center, 0);
+  ul {
+    li {
+      @include position();
+      @include dib();
+      width: 240px;
+      a {
+        display: block;
+        @include link($write, '');
+      }
+      span {
+        @include position(absolute, 15px, 0, 0, auto);
+        width: 1px;
+        height: 20px;
+        background-color: #e0e0e0;
+      }
+      &:last-child {
+        span {
+          display: none;
+        }
+      }
+      &.active {
+        height: 46px;
+        border-bottom: 4px solid #ffaeae;
+      }
+    }
+  }
+}

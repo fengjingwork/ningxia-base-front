@@ -1,0 +1,47 @@
+@import "common";
+
+.top {
+  height: 30px;
+  line-height: 30px;
+  background: rgba(0,0,0,0.3);
+  @include font(14px, $write);
+  .logout, span {
+    img {
+      vertical-align: text-top;
+      margin-right: 5px;
+    }
+  }
+  &-pop {
+    &-head {
+      margin-right: 5px;
+      img {
+        @include radius(50%);
+      }
+    }
+    &-info {
+      .type {
+        margin-bottom: 10px;
+        margin-left: 5px;
+      }
+      .btn {
+        a, span {
+          margin: 0 5px;
+          @include font(14px, $gray3);
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            color: $themeColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+.el-popover {
+  border: 1px solid $themeColor;
+  .popper__arrow {
+    display: none;
+  }
+}
+

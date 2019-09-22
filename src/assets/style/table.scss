@@ -1,0 +1,32 @@
+@import "common";
+
+.table {
+  .el-table {
+    .thead {
+      background-color: #f3f6f8;
+      th {
+        background-color: #f3f6f8;
+        color: $gray3;
+      }
+    }
+    .el-table__row {
+      a {
+        @include link($gray3, $themeColor, underline);
+      }
+      .read-btn {
+        @include dib();
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .read-btn.read-no {
+        cursor: auto;
+      }
+    }
+  }
+
+}
+
+

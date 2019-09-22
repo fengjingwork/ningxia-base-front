@@ -1,0 +1,65 @@
+@import "common";
+
+.side-list {
+  .side-tit {
+    height: 35px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    .tit {
+      @include position();
+      float: left;
+      padding: 0 18px;
+      height: 36px;
+      background-color: $themeColor;
+      @include font(16px, $write, center, bold);
+      line-height: 36px;
+      span {
+        @include  position(absolute, 36px, 11px, auto, auto, 2);
+        width: 11px;
+        height: 11px;
+        background: url("../images/tit-arrow.png") no-repeat;
+      }
+    }
+    .arrow {
+      @include arrow(right, 18px, $themeColor);
+    }
+    a.more {
+      float: right;
+      line-height: 35px;
+      @include link($gray3, $themeColor, underline);
+    }
+  }
+  ul {
+    li {
+      //height: 40px;
+      line-height: 36px;
+      font-size: 14px;
+      //border-bottom: 1px solid #eee;
+      @include ell();
+      a {
+        text-align: left;
+        @include link($gray3, $themeColor, underline);
+      }
+      .date {
+        float: right;
+        margin-left: 10px;
+        color: $gray9;
+      }
+    }
+  }
+}
+
+.side-set {
+  padding: 20px 0;
+  text-align: center;
+  border: 1px solid $gray9;
+  @include radius(4px);
+  .item + .item {
+    margin-top: 20px;
+  }
+}
+
+.side-set {
+
+}

@@ -1,0 +1,158 @@
+/*公共样式*/
+@import './reset.scss';
+
+/*色值公共样式*/
+$themeColor: #e22323;
+$gray3: #333;
+$gray6: #666;
+$gray9: #999;
+$write: #fff;
+
+/*布局边框等公共样式混合器*/
+$width: 1200px;
+@mixin m0a($w: $width) {
+  width: $w;
+  margin: 0 auto;
+}
+
+@mixin position($type: relative, $t: auto, $r: auto, $b: auto, $l: auto, $z: 1) {
+  position: $type;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+}
+
+@mixin flex($just, $align) {
+  display: flex;
+  -webkit-display: flex;
+  justify-content: $just;
+  align-items: $align;
+}
+
+@mixin wah($w, $h) {
+  width: $w;
+  height: $h;
+  line-height: $h;
+}
+
+@mixin font($size: 14px, $color: $gray3, $align: center, $weight: 0) {
+  font-size: $size;
+  color: $color;
+  text-align: $align;
+  font-weight: $weight;
+}
+
+@mixin link($color: $gray3, $hover: $themeColor, $dec: none) {
+  color: $color;
+  &:hover { color: $hover; text-decoration: $dec; }
+}
+
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin ell() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin dib() {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+@mixin opacity($val) {
+  opacity: $val;
+  -moz-opacity: $val;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity= $val * 100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity= $val * 100);
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    overflow: hidden;
+    visibility:hidden
+  }
+  *height: 1%;
+}
+
+@mixin arrow($direction, $size, $color) {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  border-width: $size;
+  cursor: pointer;
+  @if $direction == top {
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent $color transparent;
+    border-top: none;
+  }
+  @else if $direction == bottom {
+    border-style: solid dashed dashed dashed;
+    border-color: $color transparent transparent transparent;
+    border-bottom: none;
+  }
+  @else if $direction == right {
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent $color;
+    border-right: none;
+  }
+  @else if $direction == left {
+    border-style: dashed solid dashed dashed;
+    border-color: transparent $color transparent transparent;
+    border-left: none;
+  }
+}
+
+html,body{
+  font-family: Microsoft YaHei, Helvetica, Arial, sans-serif;
+}
+body, button, input, select, textarea {
+  font-family: "Microsoft YaHei", 'Avenir', Helvetica, Arial, sans-serif;
+}
+#app {
+  font-family: "Microsoft YaHei", 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+.con-box {
+  @include m0a();
+  @include clearfix();
+}
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+.clearfix {
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    overflow: hidden;
+    visibility:hidden
+  }
+  *height: 1%;
+}

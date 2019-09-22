@@ -1,0 +1,671 @@
+@import "common";
+/*首页样式*/
+.home {
+  .part {
+    margin-top: 20px;
+    .part-main {
+      float: left;
+      width: 990px;
+    }
+    .part-side {
+      float: right;
+      width: 185px;
+      .side-box + .side-box {
+        margin-top: 10px;
+      }
+    }
+    .part-list {
+      float: left;
+      width: 485px;
+      min-height: 310px;
+      margin-bottom: 15px;
+      &:nth-child(2n) {
+        margin-left: 20px;
+      }
+    }
+  }
+  .head-info {
+    //@include clearfix();
+    .head-slide {
+      float: left;
+      width: 690px;
+      height: 330px;
+    }
+    .head-list {
+      float: right;
+      width: 490px;
+      .list-tit {
+        height: 35px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $gray3;
+        .tit {
+          @include position();
+          float: left;
+          padding: 0 18px;
+          height: 36px;
+          background-color: $themeColor;
+          @include font(16px, $write, center, bold);
+          line-height: 36px;
+          span {
+            @include  position(absolute, 36px, 11px, auto, auto, 2);
+            width: 11px;
+            height: 11px;
+            background: url("../images/tit-arrow.png") no-repeat;
+          }
+        }
+        a.more {
+          float: right;
+          line-height: 35px;
+          @include link($gray3, $themeColor, underline);
+        }
+      }
+      .list {
+        ul {
+          li {
+            height: 44px;
+            line-height: 44px;
+          }
+        }
+      }
+    }
+  }
+  .policy-info {
+    .policy-num {
+      height: 50px;
+      line-height: 50px;
+      background-color: $themeColor;
+      @include font(16px, $write, center, bold);
+      .policy-item {
+        @include dib();
+        width: 33%;
+      }
+    }
+  }
+  .statistics {
+    &-box {
+      width: 580px;
+      .echarts-con {
+        width: 580px;
+        height: 340px;
+        margin-top: 30px;
+      }
+    }
+  }
+  .list-title {
+    height: 40px;
+    border-bottom: 5px solid #eee;
+    .tit {
+      float: left;
+      padding-right: 20px;
+      height: 40px;
+      line-height: 35px;
+      border-bottom: 5px solid $themeColor;
+      @include font(16px, $gray3, left, bold);
+      i {
+        //@include dib();
+        margin-right: 10px;
+        vertical-align: text-top;
+      }
+    }
+    a.more {
+      float: right;
+      line-height: 35px;
+      @include link($gray3, $themeColor, underline);
+    }
+  }
+  .register {
+    height: 160px;
+    background: url("../images/login-box.jpg") no-repeat;
+    .user-head {
+      width: 60px;
+      height: 60px;
+      padding: 15px 0 0;
+      @include m0a(60px);
+      img {
+        @include radius(50%);
+      }
+    }
+    .user-name {
+      height: 20px;
+      line-height: 20px;
+      margin: 10px 0;
+      text-align: center;
+      font-weight: bold;
+    }
+    &-btn {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      a, span {
+        @include dib();
+        padding: 0 10px;
+        margin: 0 5px;
+        background-color: $themeColor;
+        @include font(16px, $write, center, 0);
+        @include link($write, $write, none);
+        @include radius(4px);
+        cursor: pointer;
+      }
+    }
+  }
+  .policy-type {
+    .type-list {
+      ul {
+        li {
+          height: 60px;
+          //line-height: 60px;
+          padding: 11.5px 0;
+          border-bottom: 1px solid #eee;
+          cursor: pointer;
+          @include font(14px, $gray3, left);
+          div.dt {
+            display: table;
+          }
+          img {
+            float: left;
+            margin-right: 8px;
+          }
+          span {
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .friend {
+    margin-top: 80px;
+    .el-select {
+      width: 100%;
+    }
+  }
+}
+
+.channel {
+  .channel-main {
+    .channel-con {
+      width: 930px;
+      .channel-part + .channel-part {
+        margin-top: 30px;
+      }
+    }
+    .channel-side {
+      width: 250px;
+      .side-box + .side-box {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.maps {
+  .part {
+    margin-top: 20px;
+    .part-main {
+      float: left;
+      width: 990px;
+    }
+    .part-side {
+      float: right;
+      width: 185px;
+      .side-box + .side-box {
+        margin-top: 10px;
+      }
+    }
+    .part-list {
+      float: left;
+      width: 485px;
+      margin-bottom: 15px;
+      &:nth-child(2n) {
+        margin-left: 20px;
+      }
+    }
+  }
+  .maps-list {
+    ul {
+      li {
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid #eee;
+        @include ell();
+        a {
+          text-align: left;
+          @include font(14px);
+          @include link($gray3, $themeColor, underline);
+        }
+        .num {
+          @include dib();
+          width: 26px;
+          height: 24px;
+          margin-right: 50px;
+          line-height: 24px;
+          background-color: $themeColor;
+          @include radius(3px);
+          @include font(14px, $write, center);
+        }
+        .date {
+          float: right;
+          margin-left: 30px;
+          @include font(14px, $gray9);
+        }
+      }
+    }
+  }
+  .statistics {
+    &-box {
+      width: 580px;
+      .echarts-con {
+        width: 580px;
+        height: 340px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.article {
+  .art-con {
+    width: 930px;
+    .art-part + .art-part {
+      margin-top: 30px;
+    }
+    .art-info {
+      .art-tit {
+        line-height: 30px;
+        @include clearfix();
+        @include font(18px, $gray3, left, bold);
+        .art-collect {
+          float: right;
+          margin-left: 20px;
+          font-size: 14px;
+          i {
+            font-size: 14px;
+          }
+          .el-button--primary.is-plain:focus {
+            color: #e22323;
+            background-color: #fce9e9;
+            border-color: #f3a7a7;
+          }
+        }
+      }
+      .art-att {
+        margin: 20px 0;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        @include clearfix();
+        .att-item {
+          float: left;
+          width: 33.33%;
+          line-height: 30px;
+          @include font(14px, $gray3, left);
+          @include ell();
+          a {
+            @include link($themeColor, $themeColor, left);
+          }
+        }
+      }
+      .art-txt {
+        @include font(14px, $gray3, left);
+        line-height: 30px;
+      }
+    }
+  }
+  .art-side {
+    width: 250px;
+    .side-box + .side-box {
+      margin-top: 30px;
+    }
+  }
+}
+
+.user {
+  margin-top: 30px;
+  &-side {
+    float: left;
+    width: 220px;
+  }
+  &-main {
+    float: right;
+    width: 950px;
+  }
+  &-box {
+    min-height: 522px;
+    padding: 20px;
+    border: 1px solid $gray9;
+    @include radius(5px);
+    &-title {
+      margin: 0 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #ccc;
+      & > span{
+        i {
+          font-size: 18px;
+          color: $themeColor;
+        }
+        @include font(18px, $gray3, left, bold);
+      }
+    }
+  }
+  &-screen {
+    .screen {
+      padding: 0 10px;
+      border: none;
+    }
+  }
+  &-table {
+    margin-top: 30px;
+    .el-button + .el-button {
+      margin: 0;
+    }
+  }
+  .set-subscribe {
+    .submit {
+      margin: 30px 0;
+      text-align: center;
+      .el-button {
+        width: 150px;
+        @include font(16px, $write);
+      }
+    }
+  }
+
+  .release {
+    .screen-border {
+      border-bottom: 1px dotted #ccc;
+    }
+    .user-tab {
+      margin: 20px 10px;
+      @include clearfix();
+    }
+    .user-search {
+      float: right;
+      min-width: 450px;
+      margin-right: 10px;
+      .el-input {
+        .el-input-group__append {
+          border-color: $themeColor;
+        }
+        .el-button {
+          padding: 9px 20px;
+          margin: -8px -20px;
+          background-color: $themeColor;
+          border-radius: 0;
+          i.el-icon-search {
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .set-password {
+    &-form {
+      width: 400px;
+      margin: 60px auto;
+    }
+    &-btn {
+      text-align: center;
+    }
+  }
+
+  .set-info {
+    &-con {
+      width: 500px;
+      margin: 60px auto 0;
+      .tishi {
+        padding-top: 10px;
+        color: $themeColor;
+        a {
+          margin-left: 15px;
+          color: #409eff;
+        }
+      }
+    }
+    &-item {
+      height: 40px;
+      margin-bottom: 20px;
+      line-height: 40px;
+      font-size: 16px;
+      .label {
+        width: 120px;
+        text-align: right;
+      }
+      .value {
+
+      }
+    }
+    &-head {
+      height: auto;
+      line-height: 20px;
+      font-size: 14px;
+      @include clearfix();
+      .top-pop-head {
+        margin-right: 15px;
+        img {
+          @include radius(50%);
+        }
+      }
+      .top-pop-info {
+        .type {
+          margin-bottom:0;
+          margin-left: 0;
+        }
+        .btn {
+          margin-bottom: 10px;
+          a, span {
+            margin: 0 5px;
+            @include font(14px, $gray3);
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+              color: $themeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.release.detail {
+  width: 1200px;
+  margin: 30px auto 0;
+  .detail-main {
+    padding-right: 20px;
+    margin-top: 30px;
+    .checkRadio {
+      .el-form-item__content {
+        line-height: 30px;
+      }
+      .el-form-item__label {
+        line-height: 30px;
+      }
+      .el-radio {
+        line-height: 30px;
+      }
+      .el-checkbox {
+        line-height: 30px;
+      }
+    }
+  }
+  .detail-btn {
+    margin: 30px 0;
+    text-align: center;
+  }
+  .dialog {
+    .dialog-pag {
+      @include clearfix();
+      .el-button {
+        margin-top: 30px;
+      }
+      .pagination {
+        float: right;
+        text-align: right;
+      }
+    }
+    .el-radio__label {
+      display: none;
+    }
+    .el-dialog__body {
+      padding-top: 0;
+    }
+  }
+}
+
+.match {
+  &-main {
+
+  }
+  &-form {
+    margin-bottom: 30px;
+    &-tit {
+      margin-bottom: 20px;
+      @include clearfix();
+      @include font(18px, $gray3, left, bold);
+      i {
+        margin-right: 10px;
+        @include font(18px, $themeColor, left, bold);
+      }
+      .prompt {
+        @include font(14px, $themeColor, left, normal);
+      }
+      .date {
+        margin-left: 10px;
+        @include font(14px, #2354e2, left, normal);
+      }
+    }
+    &-box {
+      padding: 30px 30px 10px;
+      border: 1px solid #999;
+      @include radius(5px);
+      .el-form-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 48%;
+        .el-form-item__label {
+          font-size: 16px;
+        }
+        .el-form-item__content {
+          width: 350px;
+        }
+        .el-select {
+          width: 100%;
+        }
+        .el-cascader {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-validate {
+    .codeImg {
+      margin-left: 20px;
+    }
+  }
+  &-btn {
+    margin-top: 10px;
+    text-align: center;
+    .el-button {
+      width: 140px;
+    }
+  }
+  &-info {
+    table {
+      width: 100%;
+      border: 1px solid #999;
+      border-collapse: collapse;
+      table-layout: fixed;
+      td {
+        padding: 10px;
+        border: 1px solid #999;
+        text-align: left;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      td.th {
+        width: 250px;
+        background-color: #ecf5fa;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.login {
+  @include position(absolute, 0, 0, 0, 0);
+  background: url("../images/login-bg.jpg") no-repeat top center;
+
+  &-main {
+    @include position(absolute, 0, auto, auto, 50%);
+    width: 1200px;
+    height: 100%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  &-box {
+    @include position(absolute, 50%, 50px, auto, auto, 5);
+    width: 420px;
+    background: rgba(255,255,255,0.5);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    &-title {
+      margin: 50px 0 30px;
+      @include font(26px, $gray3, center, bold);
+    }
+    &-form {
+      width: 315px;
+      margin: 0 auto;
+      .el-form {
+        &-item {
+          @include position();
+          .el-input__inner {
+            padding: 0 15px;
+            padding-left: 45px;
+            border: 0;
+            @include radius(0)
+          }
+          i.icon {
+            width: 16px;
+            height: 16px;
+            @include position(absolute, 50%, auto, auto, 8px);
+            margin-top: -8px;
+            padding-right: 8px;
+            border-right: 1px solid #ccc;
+            img {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    &-btn {
+      width: 315px;
+      margin: 15px auto 50px;
+      .btn {
+        height: 42px;
+        line-height: 42px;
+        background-color: $themeColor;
+        cursor: pointer;
+        @include font(16px, $write, center, bold);
+      }
+    }
+  }
+  &-msg {
+    height: 15px;
+    margin-top: -10px;
+    @include font(12px, $themeColor, left, 0);
+  }
+
+  .gov-login {
+    @include position(absolute, 20px, 30px, auto, auto, 10);
+    color: #fff;
+  }
+}
+
+.noData {
+  padding: 50px 0;
+  text-align: center;
+  @include font(16px);
+}
+

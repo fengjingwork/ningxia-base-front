@@ -1,0 +1,91 @@
+@import "common";
+
+.header {
+  height: 270px;
+  background: url("../images/header-bg.jpg") no-repeat center top;
+  &-search {
+    float: right;
+    width: 580px;
+    margin-top: 100px;
+    .el-tabs {
+      background: none;
+      border: none;
+      .el-tabs__header {
+        background: none;
+        border: none;
+        .el-tabs__item {
+          background-color: $write;
+          color: $themeColor;
+        }
+        .el-tabs__item.is-active {
+          background-color: $themeColor;
+          color: $write;
+        }
+      }
+    }
+    .el-radio-group {
+      .el-radio-button__inner {
+        border-radius: 0;
+        border-bottom: 0;
+      }
+    }
+    &-input {
+      .el-input {
+        .el-input-group__append {
+          border-color: $themeColor;
+        }
+        .el-input__inner {
+          border-radius: 0;
+        }
+        .el-button {
+          padding: 9px 20px;
+          margin: -8px -20px;
+          background-color: $themeColor;
+          border-radius: 0;
+          i.el-icon-search {
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-user {
+  padding: 10px 0;
+  background-color: $themeColor;
+  &-logo {
+    div {
+      @include dib();
+    }
+    .logo-box {
+      width: 73px;
+      height: 73px;
+      margin-right: 20px;
+      background: url("../images/logo.png") no-repeat;
+      vertical-align: -10px;
+    }
+    .logo-txt {
+      h1 {
+        @include font(30px, $write, left, 0);
+        font-weight: normal;
+      }
+      h2 {
+        @include font(30px, $write, left, 0);
+        font-weight: normal;
+      }
+    }
+  }
+  &-btn {
+    margin-top: 10px;
+    @include font(30px, $write, center, 0);
+    span {
+      @include dib();
+      @include font(40px, $write, center, bold);
+      margin: 0 10px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+}

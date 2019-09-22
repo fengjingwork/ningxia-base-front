@@ -1,0 +1,51 @@
+@import "common";
+
+.list{
+  ul {
+    li {
+      height: 43px;
+      line-height: 43px;
+      border-bottom: 1px solid #eee;
+      @include ell();
+      a {
+        @include dib();
+        max-width: 75%;
+        text-align: left;
+        vertical-align: top;
+        @include ell();
+        @include link($gray3, $themeColor, underline);
+      }
+      i {
+        vertical-align: middle;
+      }
+      .date {
+        float: right;
+        margin-left: 30px;
+        color: $gray9;
+      }
+    }
+  }
+
+  .list-title {
+    height: 40px;
+    border-bottom: 5px solid #eee;
+    .tit {
+      float: left;
+      padding-right: 20px;
+      height: 40px;
+      line-height: 35px;
+      border-bottom: 5px solid $themeColor;
+      @include font(16px, $gray3, left, bold);
+      i {
+        //@include dib();
+        margin-right: 10px;
+        vertical-align: text-top;
+      }
+    }
+    a.more {
+      float: right;
+      line-height: 35px;
+      @include link($gray3, $themeColor, underline);
+    }
+  }
+}
